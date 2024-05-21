@@ -1,4 +1,4 @@
-name: Testing Integration with GitHub Actions
+name: Testing owasp Integration with GitHub 
 
 on: [push]
 
