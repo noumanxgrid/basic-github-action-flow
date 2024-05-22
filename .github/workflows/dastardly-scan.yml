@@ -24,3 +24,10 @@ jobs:
         with:
           report_paths: 'dastardly-report.xml'          # Adjust the path if necessary
           require_tests: true
+      # Add a new step to upload the XML report as an artifact
+      - name: Upload Dastardly Report
+        if: always()                                    # Forces this step to always run
+        uses: actions/upload-artifact@v2
+        with:
+          name: dastardly-report
+          path: dastardly-report.xml   
