@@ -22,7 +22,7 @@ jobs:
         if: always()                                    # Forces this step to always run
         uses: mikepenz/action-junit-report@v3
         with:
-          report_paths: 'dastardly-report.html'          # Adjust the path if necessary
+          report_paths: 'dastardly-report.xml'          # Adjust the path if necessary
           require_tests: true
       # Add a new step to upload the XML report as an artifact
       - name: Upload Dastardly Report
@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dastardly-report
-          path: dastardly-report.html   
+          path: dastardly-report.xml   
