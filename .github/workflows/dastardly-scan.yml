@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   dastardly_job:
-    name: Run Dastardly Integration
+    name: Run Dastardly Integration   
     runs-on: ubuntu-latest
 
     steps:
